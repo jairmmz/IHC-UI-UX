@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,6 +29,8 @@ Route::get('/about', function() {
 Route::get('/contact', function() {
     return view('contact');
 })->name('contact');
+
+Route::post('contact/store', [UserController::class, 'store'])->name('contact.store');
 
 Route::get('/elements', function() {
     return view('elements');

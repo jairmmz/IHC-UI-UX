@@ -8,46 +8,56 @@
                 <div class="col-lg-6 mx-auto text-center">
                     <div class="intro-wrap">
                         <h1 class="mb-0">Contact Us</h1>
-                        <p class="text-white">Far far away, behind the word mountains, far from the countries Vokalia and
-                            Consonantia, there live the blind texts. </p>
+                        <p class="text-white">Lejos, muy lejos, detrás de las montañas de la palabra, lejos de los países Vokalia y Consonantia, viven los textos ciegos. </p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-
-
     <div class="untree_co-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 mb-5 mb-lg-0">
-                    <form class="contact-form" data-aos="fade-up" data-aos-delay="200">
+                    <form action="{{ route('contact.store') }}" class="contact-form" data-aos="fade-up" data-aos-delay="200" method="POST">
+                        @csrf
                         <div class="row">
                             <div class="col-6">
                                 <div class="form-group">
-                                    <label class="text-black" for="fname">First name</label>
-                                    <input type="text" class="form-control" id="fname">
+                                    <label class="text-black" for="firstName">Nombres*</label>
+                                    <input type="text" name="firstName" class="form-control" id="firstName" value="{{ old('firstName') }}">
+                                    @error('firstName')
+                                    <div class="form-text" style="color: #f00">{{ $message }}</div>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="form-group">
-                                    <label class="text-black" for="lname">Last name</label>
-                                    <input type="text" class="form-control" id="lname">
+                                    <label class="text-black" for="lastName">Apellidos*</label>
+                                    <input type="text" name="lastName" class="form-control" id="lastName" value="{{ old('lastName') }}">
+                                    @error('lastName')
+                                    <div class="form-text" style="color: #f00">{{ $message }}</div>
+                                    @enderror
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="text-black" for="email">Email address</label>
-                            <input type="email" class="form-control" id="email">
+                            <label class="text-black" for="email">Correo electrónico*</label>
+                            <input type="email" name="email" class="form-control" id="email" value="{{ old('email') }}">
+                            @error('email')
+                            <div class="form-text" style="color: #f00">{{ $message }}</div>
+                            @enderror
                         </div>
 
                         <div class="form-group">
-                            <label class="text-black" for="message">Message</label>
-                            <textarea name="" class="form-control" id="message" cols="30" rows="5"></textarea>
+                            <label class="text-black" for="message">Mensaje*</label>
+                            <textarea name="message" class="form-control" id="message" cols="30" rows="5">{{ old('message') }}</textarea>
+                            @error('message')
+                            <div class="form-text" style="color: #f00">{{ $message }}</div>
+                            @enderror
                         </div>
 
-                        <button type="submit" class="btn btn-primary">Send Message</button>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
                     </form>
                 </div>
                 <div class="col-lg-5 ml-auto">
