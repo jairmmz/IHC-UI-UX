@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\UserRequest;
+use App\Models\Contact;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Validator;
 
 class UserController extends Controller
 {
@@ -15,8 +18,29 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        return view('home');
     }
+
+    public function about()
+    {
+        return view('about');
+    }
+
+    public function contact()
+    {
+        return view('contact');
+    }
+
+    public function elements()
+    {
+        return view('elements');
+    }
+
+    public function services()
+    {
+        return view('services');
+    }
+
 
     /**
      * Show the form for creating a new resource.
@@ -36,7 +60,13 @@ class UserController extends Controller
      */
     public function store(UserRequest $request)
     {
-        return "Mensaje enviado";
+        try {
+            Contact::create($request->validated());
+    
+            return back()->with(["status" => "success", "message" => "El mensaje ha sido enviado.", "color" => "success"]);
+        } catch (\Throwable $th) {
+            return back()->with(["status" => "error", "message" => "El mensaje no ha sido enviado.", "color" => "danger"]);
+        }
     }
 
     /**

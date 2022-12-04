@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-md-6 col-lg-4">
                     <div class="widget">
-                        <h3 class="heading">About Tour</h3>
+                        <h3 class="heading">Acerca de Tour Apurímac</h3>
                         <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
                     </div>
                     <div class="widget">
@@ -22,31 +22,31 @@
                 </div>
                 <div class="col-md-6 col-lg-2 pl-lg-5">
                     <div class="widget">
-                        <h3 class="heading">Pages</h3>
+                        <h3 class="heading">Páginas</h3>
                         <ul class="links list-unstyled">
                             <li><a href="#">Blog</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Acerca de</a></li>
+                            <li><a href="#">Contacto</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-2">
                     <div class="widget">
-                        <h3 class="heading">Resources</h3>
+                        <h3 class="heading">Recursos</h3>
                         <ul class="links list-unstyled">
                             <li><a href="#">Blog</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Acerca de</a></li>
+                            <li><a href="#">Contacto</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4">
                     <div class="widget">
-                        <h3 class="heading">Contact</h3>
+                        <h3 class="heading">Contacto</h3>
                         <ul class="list-unstyled quick-info links">
                             <li class="email"><a href="#">mail@example.com</a></li>
-                            <li class="phone"><a href="#">+1 222 212 3819</a></li>
-                            <li class="address"><a href="#">43 Raymouth Rd. Baltemoer, London 3910</a></li>
+                            <li class="phone"><a href="#">+59 983 252 381</a></li>
+                            <li class="address"><a href="#">Av. Arenas N°43, Abancay, Apurímac</a></li>
                         </ul>
                     </div>
                 </div>

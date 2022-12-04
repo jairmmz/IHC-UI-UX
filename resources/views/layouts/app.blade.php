@@ -7,7 +7,7 @@
 	<meta name="author" content="">
 	<link rel="shortcut icon" href="favicon.png">
 
-	<meta name="description" content="" />
+	<meta name="description" content="JMM-etc" />
 	<meta name="keywords" content="bootstrap, bootstrap4" />
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,8 +24,8 @@
 	<link rel="stylesheet" href="css/aos.css">
 	<link rel="stylesheet" href="css/style.css">
 
-	{{-- <title>Turismo Apurímac SDK</title> --}}
-
+    <meta name="description" content="@yield('meta-description')">
+	
     <title>@yield('title' ?? 'Título por defecto')</title>
 
 </head>
@@ -68,35 +68,44 @@
 	<script src="js/daterangepicker.js"></script>
 
 	<script src="js/typed.js"></script>
-	<script>
-		$(function() {
-			var slides = $('.slides'),
-			images = slides.find('img');
 
-			images.each(function(i) {
-				$(this).attr('data-id', i + 1);
+	@if (request()->routeIs('home'))
+		<script>
+			$(function() {
+				var slides = $('.slides'),
+				images = slides.find('img');
+
+				images.each(function(i) {
+					$(this).attr('data-id', i + 1);
+				})
+
+				var typed = new Typed('.typed-words', {
+					strings: ["Apurímac."," Abancay."," Tamburco.", " Chalhuanca.", " y más..."],
+					typeSpeed: 80,
+					backSpeed: 80,
+					backDelay: 4000,
+					startDelay: 1000,
+					loop: true,
+					showCursor: true,
+					preStringTyped: (arrayPos, self) => {
+						arrayPos++;
+						console.log(arrayPos);
+						$('.slides img').removeClass('active');
+						$('.slides img[data-id="'+arrayPos+'"]').addClass('active');
+					}
+				});
 			})
+		</script>
+	@endif
 
-			var typed = new Typed('.typed-words', {
-				strings: ["Apurímac."," Abancay."," Tamburco.", " Chalhuanca.", " y más..."],
-				typeSpeed: 80,
-				backSpeed: 80,
-				backDelay: 4000,
-				startDelay: 1000,
-				loop: true,
-				showCursor: true,
-				preStringTyped: (arrayPos, self) => {
-					arrayPos++;
-					console.log(arrayPos);
-					$('.slides img').removeClass('active');
-					$('.slides img[data-id="'+arrayPos+'"]').addClass('active');
-				}
-
-			});
-		})
-	</script>
+	<script type="text/javascript" src="{{ asset('vendor/jsvalidation/js/jsvalidation.js')}}"></script>
+	
+	<div>
+        @yield('jsvalidation')
+    </div>
 
 	<script src="js/custom.js"></script>
 </body>
 
 </html>
+

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Acerca de')
+@section('title', 'Tour Apurímac - Acerca de')
 
 @section('content')
     <div class="hero hero-inner">
@@ -8,7 +8,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 mx-auto text-center">
                     <div class="intro-wrap">
-                        <h1 class="mb-0">About Us</h1>
+                        <h1 class="mb-0">Sobre nosotros</h1>
                         <p class="text-white">Far far away, behind the word mountains, far from the countries Vokalia and
                             Consonantia, there live the blind texts. </p>
                     </div>
@@ -55,7 +55,7 @@
         <div class="container">
             <div class="row justify-content-center mb-5">
                 <div class="col-md-6 text-center">
-                    <h2 class="section-title mb-3 text-center">Team</h2>
+                    <h2 class="section-title mb-3 text-center">Equipo</h2>
                     <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live
                         the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large
                         language ocean.</p>

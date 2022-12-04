@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Elementos')
+@section('title', 'Tour Apurímac - Elementos')
 
 @section('content')
     <div class="hero hero-inner">
