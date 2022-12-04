@@ -1,4 +1,4 @@
-<nav class="site-nav">
+<nav class="site-nav" style="background: #1A374D">
     <div class="container">
         <div class="site-navigation">
             <a href="{{ route('home') }}" class="logo m-0">Tour Apurímac <span class="text-primary">.</span></a>
@@ -21,10 +21,10 @@
                         <li><a href="#">Menu Three</a></li>
                     </ul>
                 </li>
-                <li class="{{ request()->routeIs('elements') ? 'active' : '' }} "><a href="{{ route('elements') }}">Elementos</a></li>
                 <li class="{{ request()->routeIs('services') ? 'active' : '' }} "><a href="{{ route('services') }}">Servicios</a></li>
                 <li class="{{ request()->routeIs('about') ? 'active' : '' }} "><a href="{{ route('about') }}">Acerca de</a></li>
                 <li class="{{ request()->routeIs('contact') ? 'active' : '' }} "><a href="{{ route('contact') }}">Contacto</a></li>
+                <li class="{{ request()->routeIs('register') ? 'active' : '' }} "><a href="{{ route('register') }}">Login</a></li>
             </ul>
 
             <a href="#" class="burger ml-auto float-right site-menu-toggle js-menu-toggle d-inline-block d-lg-none light" data-toggle="collapse" data-target="#main-navbar">

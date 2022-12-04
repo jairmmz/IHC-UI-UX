@@ -13,7 +13,8 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Source+Serif+Pro:wght@400;700&display=swap" rel="stylesheet">
-
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+        
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/owl.carousel.min.css">
 	<link rel="stylesheet" href="css/owl.theme.default.min.css">
@@ -23,6 +24,10 @@
 	<link rel="stylesheet" href="css/daterangepicker.css">
 	<link rel="stylesheet" href="css/aos.css">
 	<link rel="stylesheet" href="css/style.css">
+
+	@if (request()->routeIs('register'))
+		<link rel="stylesheet" href="{{ asset('css/my_style.css') }}">
+	@endif
 
     <meta name="description" content="@yield('meta-description')">
 	
@@ -46,7 +51,9 @@
         @yield('content')
     </div>
 
-    @include('layouts.footers.footer')
+	@if (!request()->routeIs('register'))
+    	@include('layouts.footers.footer')
+	@endif
 
 	<div id="overlayer"></div>
 	<div class="loader">
@@ -66,6 +73,9 @@
 	<script src="js/aos.js"></script>
 	<script src="js/moment.min.js"></script>
 	<script src="js/daterangepicker.js"></script>
+	<script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js'></script>
+	
+	<script src="{{ asset('js/script.js') }}"></script>
 
 	<script src="js/typed.js"></script>
 
@@ -80,7 +90,7 @@
 				})
 
 				var typed = new Typed('.typed-words', {
-					strings: ["Apurímac."," Abancay."," Tamburco.", " Chalhuanca.", " y más..."],
+					strings: ["Abancay."," Andahuaylas."," Antabamba.", " Aymaraes.", " Cotabambas", " Grau", " Chincheros"],
 					typeSpeed: 80,
 					backSpeed: 80,
 					backDelay: 4000,

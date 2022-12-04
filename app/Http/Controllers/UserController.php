@@ -31,9 +31,9 @@ class UserController extends Controller
         return view('contact');
     }
 
-    public function elements()
+    public function register()
     {
-        return view('elements');
+        return view('register');
     }
 
     public function services()
