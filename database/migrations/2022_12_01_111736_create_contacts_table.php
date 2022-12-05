@@ -18,6 +18,8 @@ return new class extends Migration
             $table->string('firstName');
             $table->string('lastName');
             $table->string('email');
+            $table->string('phoneNumber')->default('not number');
+            $table->string('img_user')->default("not_image");
             $table->longText('message');
             $table->timestamps();
         });

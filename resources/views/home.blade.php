@@ -244,7 +244,7 @@
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-lg-7 text-center">
-				<h2 class="section-title text-center mb-5">Testimonios</h2>
+				<h2 class="section-title text-center mb-5">Experiencias de los Visitantes</h2>
 
 				<div class="owl-single owl-carousel no-nav">
 					<div class="testimonial mx-auto">

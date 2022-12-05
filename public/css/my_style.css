@@ -103,7 +103,7 @@ select:focus {
 }
 
 .next-button:hover {
-    background-color: #E53935;
+    background-color: #22BB33;
     color: #fff
 }
 
@@ -146,7 +146,7 @@ select:focus {
     display: block;
     font-size: 20px;
     background: #fff;
-    border: 2px solid #E53935;
+    border: 2px solid #22BB33;
     border-radius: 50%;
     margin: auto
 }
@@ -186,11 +186,11 @@ select:focus {
 }
 
 #progressbar li.active:after {
-    background: #E53935
+    background: #22BB33;
 }
 
 #progressbar li.active:before {
-    background: #E53935;
+    background: #22BB33;
     font-family: FontAwesome;
     content: "\f00c"
 }
@@ -209,7 +209,7 @@ select:focus {
 }
 
 .prev:hover {
-    color: #D50000 !important
+    color: #000000 !important
 }
 
 @media screen and (max-width: 912px) {
@@ -243,4 +243,8 @@ select:focus {
     #progressbar {
         left: -25px
     }
+}
+
+.edit-back{
+    font-size: 18px;
 }

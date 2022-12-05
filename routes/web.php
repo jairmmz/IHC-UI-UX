@@ -24,6 +24,11 @@ Route::get('/about', [UserController::class, 'about'])->name('about');
 Route::get('/contact', [UserController::class, 'contact'])->name('contact');
 Route::get('/register', [UserController::class, 'register'])->name('register');
 Route::get('/services', [UserController::class, 'services'])->name('services');
+Route::get('/login', [UserController::class, 'login'])->name('login');
+Route::get('/perfil', [UserController::class, 'perfil'])->name('perfil');
+
+Route::patch('/perfil/{contact}', [UserController::class, 'perfilSave'])->name('perfil.update');
+
 
 
 Route::post('contact/store', [UserController::class, 'store'])->name('contact.store');

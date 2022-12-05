@@ -10,7 +10,7 @@
                         <div class="col-lg-12">
                             <div class="card card00 m-2 border-0">
                                 <div class="row text-center justify-content-center px-3">
-                                    <p class="prev text-danger"><span class="fa fa-long-arrow-left"> Regresar</span></p
+                                    <p class="prev text-success"><span class="fa edit-back fa-long-arrow-left"> Regresar</span></p
                                         id="back">
                                     <h3 class="mt-4">Registro</h3>
                                 </div>
@@ -86,20 +86,20 @@
                                                 </div>
                                                 
                                             </div>
-                                            <div class="row mb-5">
+                                            <div class="row">
                                                 <div class="next-button text-center mt-1 ml-2" style="">Registrarse</div>
                                             </div>
                                         </div>
                                         <div class="card2 ml-2">
                                             <div class="row px-3 mt-2 mb-4 text-center">
-                                                <h2 class="col-12 text-danger"><strong>Success !</strong></h2>
+                                                <h2 class="col-12 text-success"><strong>Success !</strong></h2>
                                                 <div class="col-12 text-center">
-                                                    <img class="tick" src="{{ asset('images/WDI0da4.gif') }}">
+                                                    <img class="tick" style="color: green" src="https://media.tenor.com/0EflySmYSuAAAAAC/check-mark-button-joypixels.gif">
                                                 </div>
                                             </div>
                                             <div class="row mb-5">
                                                 <div class="col-lg-6">
-                                                    <a href="{{ route('contact') }}" class="btn btn-primary">Iniciar Sessión</a>
+                                                    <a href="{{ route('login') }}" class="btn btn-primary">Iniciar Sessión</a>
                                                 </div>
                                                 <div class="col-lg-6">
                                                     <a href="{{ route('home') }}" class="btn btn-primary">Regresar al home</a>
@@ -112,7 +112,7 @@
                             <div class="col-12">
                                 <div class="row px-3">
                                     <h2 class="text-muted get-bonus mt-4 mb-5">
-                                        Registro
+                                        {{-- Registro --}}
                                         <span class="text-danger">
                                             
                                         </span>

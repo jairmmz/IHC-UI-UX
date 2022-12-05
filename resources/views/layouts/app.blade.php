@@ -26,7 +26,7 @@
 	<link rel="stylesheet" href="css/style.css">
 
 	@if (request()->routeIs('register'))
-		<link rel="stylesheet" href="{{ asset('css/my_style.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/my_style.css') }}">
 	@endif
 
     <meta name="description" content="@yield('meta-description')">

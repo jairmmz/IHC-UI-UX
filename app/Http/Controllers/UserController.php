@@ -36,9 +36,28 @@ class UserController extends Controller
         return view('register');
     }
 
+    public function login()
+    {
+        return view('login');
+    }
+
     public function services()
     {
         return view('services');
+    }
+    public function perfil(Contact $contac)
+    {
+        $contact = Contact::find('1');
+
+        return view('perfil', compact('contact'));
+    }
+    public function perfilSave(Contact $contact, Request $request)
+    {
+        $contact = Contact::find('1');
+
+        $contact->update($request->all());
+
+        return to_route('perfil');
     }
 
 
@@ -65,7 +84,9 @@ class UserController extends Controller
     
             return back()->with(["status" => "success", "message" => "El mensaje ha sido enviado.", "color" => "success"]);
         } catch (\Throwable $th) {
-            return back()->with(["status" => "error", "message" => "El mensaje no ha sido enviado.", "color" => "danger"]);
+            
+            // return back()->with(["status" => "error", "message" => "El mensaje no ha sido enviado.", "color" => "danger"]);
+            return response()->json($th);
         }
     }
 
