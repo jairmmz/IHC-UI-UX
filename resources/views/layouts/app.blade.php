@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="author" content="">
-	<link rel="shortcut icon" href="favicon.png">
+	{{-- <link rel="shortcut icon" href="favicon.png"> --}}
 
 	<meta name="description" content="JMM-etc" />
 	<meta name="keywords" content="bootstrap, bootstrap4" />
@@ -26,7 +26,7 @@
 	<link rel="stylesheet" href="css/style.css">
 
 	@if (request()->routeIs('register'))
-	<link rel="stylesheet" href="{{ asset('css/my_style.css') }}">
+		<link rel="stylesheet" href="{{ asset('css/my_style.css') }}">
 	@endif
 
     <meta name="description" content="@yield('meta-description')">
@@ -113,6 +113,10 @@
 	<div>
         @yield('jsvalidation')
     </div>
+
+	<div>
+		@yield('jsconfirm')
+	</div>
 
 	<script src="js/custom.js"></script>
 </body>

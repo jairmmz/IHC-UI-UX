@@ -10,7 +10,6 @@
 			<div class="col-lg-7">
 				<div class="intro-wrap">
 					<h1 class="mb-5"><span class="d-block">Destinos turísticos</span> en <span class="typed-words"></span></h1>
-
 					<div class="row">
 						<div class="col-12">
 							<form class="form">
@@ -54,11 +53,11 @@
 			</div>
 			<div class="col-lg-5">
 				<div class="slides">
-					<img src="images/hero-slider-1.jpg" alt="Image" class="img-fluid active">
-					<img src="images/hero-slider-2.jpg" alt="Image" class="img-fluid">
-					<img src="images/hero-slider-3.jpg" alt="Image" class="img-fluid">
-					<img src="images/hero-slider-4.jpg" alt="Image" class="img-fluid">
-					<img src="images/hero-slider-5.jpg" alt="Image" class="img-fluid">
+					<img src="{{ asset('images/slider_circa_yaca4.jpg') }}" alt="Image" class="img-fluid active">
+					<img src="{{ asset('images/slider_circa_catarata_fondo.jpg') }}" alt="Image" class="img-fluid">
+					<img src="{{ asset('images/slider_tamburco-ampay-animal2.jpg') }}" alt="Image" class="img-fluid">
+					<img src="{{ asset('images/slider_abancay-mirador.jpg') }}" alt="Image" class="img-fluid">
+					<img src="{{ asset('images/slider_abancay_pachachaca.jpg') }}" alt="Image" class="img-fluid">
 				</div>
 			</div>
 		</div>
